@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Chinni Srikar">
+    <meta name="description" content="An application to visualize call logs as Graph">
+    <meta name="og:description" content="An application to visualize call logs as Graph">
+    <title>Connections </title>
+</head>
+<h2>Plot your Connections</h2>
+<p>
+    Use the application provided for exporting your calllogs. Transfer the file to PC. Upload and Generate
+
+    Here is the link for downloading the android app: <a href="https://drive.google.com/file/d/1oOcTe5B9iTKzT18ldotqBkM51CwUP6PT/view?usp=sharing">Google Drive Link</a>
+
+    <i>Apple doesn't allow reading call logs for security reasons. So there is no iOS app</i>
+</p>
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data" action='/generate'>
+        Name <input type="text" name="username" placeholder="Enter your name" />
+        Select the CSV file <input type="file" name="file" id="fileUpload" accept=".csv" />
+        <input type="radio" name="graphCriterion" value="count" >by Count</input>
+        <input type="radio" name="graphCriterion" value="duration" >by Duration</input>
+        <input type="radio" name="graphCriterion" value="incoming" >by Incoming Calls</input>
+        <input type="radio" name="graphCriterion" value="outgoing" >by Outgoing Calls</input>
+        <input type="submit" value="Generate Graph" />
+    </form>
+
+</div>
+</html>

@@ -23,8 +23,6 @@ def dataPreprocessing(data):
     '''
     data = data[data['type'].isin(["INCOMING", "OUTGOING"])]
     data.name.fillna(data.phoneNumber, inplace=True)
-    if(len(data > 1500)):
-        data = data[:1499]
     incData = data[data['type'] == "INCOMING"]
     outData = data[data['type'] == "OUTGOING"]
     uniqueNames = data['name'].value_counts().index.to_list()
